@@ -255,6 +255,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AliothAperture \
     AliothCarrierConfig \
     AliothFrameworks \
     AliothNfc \
