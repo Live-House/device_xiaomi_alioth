@@ -12,6 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Private Sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/xiaomi/alioth/sepolicy/private
+
+# Public Sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/xiaomi/alioth/sepolicy/public
+
 # QCOM Sepolicy
 BOARD_SEPOLICY_DIRS += \
     device/xiaomi/alioth/sepolicy/vendor/qcom
@@ -25,6 +33,7 @@ BOARD_SEPOLICY_DIRS += \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/dolby \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/fingerprint \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/ir \
+    device/xiaomi/alioth/sepolicy/vendor/xiaomi/mlipay \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/modem \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/power_supply \
     device/xiaomi/alioth/sepolicy/vendor/xiaomi/sensors \
