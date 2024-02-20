@@ -49,7 +49,7 @@ void load_redmi_k40() {
     property_override("bluetooth.device.default_name", "Redmi K40");
     property_override("ro.boot.hardware.sku", "pro");
     property_override("ro.product.brand", "Redmi");
-    property_override("ro.product.mod_device", "alioth_global");
+    property_override("ro.product.mod_device", "alioth");
     property_override("ro.product.device", "alioth");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.model", "M2012K11AC");
@@ -75,11 +75,11 @@ void load_xiaomi_mi11x() {
     property_override("bluetooth.device.default_name", "Mi 11X");
     property_override("ro.boot.hardware.sku", "std");
     property_override("ro.product.brand", "Mi");
-    property_override("ro.product.mod_device", "alioth_global");
-    property_override("ro.product.device", "alioth");
+    property_override("ro.product.mod_device", "aliothin");
+    property_override("ro.product.device", "aliothin");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.model", "M2012K11AI");
-    property_override("ro.product.name", "alioth");
+    property_override("ro.product.name", "aliothin");
     property_override("ro.build.description", "aliothin-user 13 TKQ1.221114.001 V816.0.1.0.TKHINXM release-keys");
     property_override("ro.build.fingerprint", "Mi/aliothin/aliothin:13/TKQ1.221114.001/V816.0.1.0.TKHINXM:user/release-keys");
 }
