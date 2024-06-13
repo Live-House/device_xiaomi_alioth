@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
 
 PRODUCT_PACKAGES += \
+    libutilscallstack.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
@@ -296,6 +297,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.force_ltd_sys_ind=1 \
     persist.vendor.radio.manual_nw_rej_ct=1
 
+# QMI
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
+
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
@@ -404,4 +411,5 @@ PRODUCT_COPY_FILES += \
 
 # WFD
 PRODUCT_PACKAGES += \
+    libpng.vendor \
     libwfdaac_vendor:32
