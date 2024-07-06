@@ -77,6 +77,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
+# Basic Call Recorder
+$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
