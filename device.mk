@@ -46,8 +46,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.ring.filter.mask=0 \
     ro.audio.monitorRotation=true \
     ro.config.vc_call_vol_steps=11 \
-    ro.vendor.audio.dolby.dax.support=true \
-    ro.vendor.audio.dolby.surround.enable=true \
     ro.vendor.audio.enhance.support=false \
     ro.vendor.audio.gain.support=true \
     ro.vendor.audio.karaok.support=true \
@@ -60,8 +58,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.us.type=mius \
     ro.vendor.audio.zoom.support=true \
     ro.vendor.audio.zoom.type=1 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.spkcal.copy.inhal=true \
     vendor.audio.usb.disable.sidetone=true
 
@@ -77,9 +73,6 @@ PRODUCT_ODM_PROPERTIES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-PRODUCT_PACKAGES += \
-    XiaomiDolby
 
 # Basic Call Recorder
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
@@ -237,15 +230,6 @@ PRODUCT_PACKAGES += \
 
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
-# Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail_vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-
 # Mlipay
 PRODUCT_PACKAGES += \
     IFAAService \
@@ -386,10 +370,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.neuralnetworks@1.3.vendor
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # VPP tunings
 PRODUCT_COPY_FILES += \
