@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service
 
 # Camera
+PRODUCT_NO_CAMERA := true
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -251,8 +252,12 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/nfc/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Overlays
+ifneq ($(PRODUCT_NO_CAMERA), true)
 PRODUCT_PACKAGES += \
-    AliothAperture \
+    AliothAperture
+endif
+
+PRODUCT_PACKAGES += \
     AliothCarrierConfig \
     AliothFrameworks \
     AliothNfc \
