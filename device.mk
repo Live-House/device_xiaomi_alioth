@@ -350,6 +350,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Target VNDK Fallback version
+PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32 33
+
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
