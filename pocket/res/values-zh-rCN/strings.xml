@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appname">省电口袋模式</string>
+    <string name="pocketmode_title">省电口袋模式</string>
+    <string name="pocketmode_short_title">口袋模式</string>
+    <string name="pocketmode_summary">省电口袋模式</string>
+    <string name="pocketmode_description">传统的口袋模式会不断检查近距离传感器和光线传感器，而这种模式则不同，它只在手机处于锁屏时才会检查这些传感器。因此，电池寿命将得到延长，深度睡眠模式也将得到优化。\n\n如果从口袋中取出手机后屏幕自动关闭，请稍等片刻，一切都会恢复正常。</string>
+</resources>
