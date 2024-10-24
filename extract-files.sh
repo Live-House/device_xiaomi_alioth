@@ -62,6 +62,9 @@ function blob_fixup() {
         vendor/etc/seccomp_policy/atfwd@2.0.policy )
             grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
             ;;
+        vendor/lib64/libwvhidl.so )
+            $PATCHELF --replace-needed "libcrypto.so" "libcrypto-v34.so" "${2}"
+            ;;
     esac
 }
 
