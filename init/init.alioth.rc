@@ -5,6 +5,8 @@ import /vendor/etc/init/init.charge_logger.rc
 on init
     # Property used for sku specific sysconfig and permissions
     setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
+    # Set hardware revision property
+    setprop ro.boot.hardware.revision ${ro.boot.hwversion}
 
 on fs
     mkdir /mnt/vendor/persist/haptics 0755 system system
